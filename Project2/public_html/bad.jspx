@@ -18,6 +18,7 @@
                          binding="#{backing_bad.outputText1}" id="outputText1"/>
         </af:panelFormLayout>
         <af:button text="test ecapi" id="b1" binding="#{backing_bad.b1}"/>
+        <af:button text="test lindi" id="b2" binding="#{backing_bad.b2}"/>
       </af:form>
     </af:document>
   </f:view>

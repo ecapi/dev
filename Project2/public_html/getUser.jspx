@@ -17,6 +17,7 @@
           </f:facet>
           <af:inputText label="UserName" binding="#{backing_getUser.uid}"
                         id="uid"/>
+          <af:inputText label="PSW" binding="#{backing_getUser.it2}" id="it2"/>
         </af:panelFormLayout>
       </af:form>
     </af:document>

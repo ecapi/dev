@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <af:document binding="#{backing_good.document1}" id="document1">
+      <af:form binding="#{backing_good.form1}" id="form1">
+        <af:outputText value="welcome to the app"
+                       binding="#{backing_good.outputText1}" id="outputText1"/>
+      </af:form>
+    </af:document>
+  </f:view>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_good-->
+</jsp:root>

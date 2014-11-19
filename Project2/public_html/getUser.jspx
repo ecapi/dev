@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=windows-1252"/>
+  <f:view>
+    <af:document id="document1">
+      <af:form  id="form1">
+        <af:panelFormLayout 
+                            id="panelFormLayout1">
+          <f:facet name="footer">
+            <af:commandButton text="Login"
+                              binding="#{backing_getUser.commandButton1}"
+                              id="commandButton1"
+                              action="#{backing_getUser.login_action}"/>
+          </f:facet>
+          <af:inputText label="UserName" binding="#{backing_getUser.uid}"
+                        id="uid"/>
+        </af:panelFormLayout>
+      </af:form>
+    </af:document>
+  </f:view>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_getUser-->
+</jsp:root>

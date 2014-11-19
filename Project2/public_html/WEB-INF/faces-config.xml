@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<faces-config version="2.1" xmlns="http://java.sun.com/xml/ns/javaee">
+  <navigation-rule>
+    <from-view-id>/getUser.jspx</from-view-id>
+    <navigation-case>
+      <from-outcome>bad</from-outcome>
+      <to-view-id>/bad.jspx</to-view-id>
+    </navigation-case>
+    <navigation-case>
+      <from-outcome>good</from-outcome>
+      <to-view-id>/good.jspx</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+  <navigation-rule>
+    <from-view-id>/good.jspx</from-view-id>
+  </navigation-rule>
+  <application>
+    <default-render-kit-id>oracle.adf.rich</default-render-kit-id>
+  </application>
+  <managed-bean>
+    <managed-bean-name>backing_getUser</managed-bean-name>
+    <managed-bean-class>login.backing.GetUser</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1getUser.jspx-->
+  </managed-bean>
+  <managed-bean>
+    <managed-bean-name>backing_good</managed-bean-name>
+    <managed-bean-class>login.backing.Good</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1good.jspx-->
+  </managed-bean>
+  <managed-bean>
+    <managed-bean-name>backing_bad</managed-bean-name>
+    <managed-bean-class>login.backing.Bad</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1bad.jspx-->
+  </managed-bean>
+  <navigation-rule>
+    <from-view-id>/bad.jspx</from-view-id>
+    <navigation-case>
+      <from-outcome>tryagain</from-outcome>
+      <to-view-id>/getUser.jspx</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+</faces-config>
